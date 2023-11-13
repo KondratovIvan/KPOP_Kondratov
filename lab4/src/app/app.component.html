@@ -1,0 +1,7 @@
+
+    <div>
+      <label for="numberArray">Введіть масив чисел (через кому):</label>
+      <input type="text" id="numberArray" [(ngModel)]="numberArray">
+      <button (click)="findMinMax()">Знайти числа</button>
+    </div>
+    <app-child [numbers]="numbersBetweenMinMax"></app-child>

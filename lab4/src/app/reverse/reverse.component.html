@@ -1,0 +1,5 @@
+<h1>{{title}}</h1>
+<label for="userInput">Введіть слово:</label>
+<input type="text" [(ngModel)]="userInput" id="userInput" name="userInput">
+<button (click)="reverseWord()">Перегорнути</button>
+<p *ngIf="reversedWord">Перегорнуте слово: {{reversedWord}}</p>
