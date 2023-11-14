@@ -1,0 +1,14 @@
+<div class="dialog-container">
+  <h2><b>Info</b></h2>
+  <p><strong>Id:</strong> {{ data.id }}</p>
+  <p><strong>UserId:</strong> {{ data.userId }}</p>
+  <p><strong>Title:</strong> {{ data.title }}</p>
+  <p><strong>Completed:</strong> {{ data.completed }}</p>
+  <br />
+  <button
+    mat-raised-button
+    (click)="selectedService.handleSelected(data)"
+  >
+    Handle selected
+  </button>
+</div>
