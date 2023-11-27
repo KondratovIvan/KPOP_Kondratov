@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<form [formGroup]="userForm">
+  <label for="login" class="required">Логін:</label>
+  <input type="text" id="login" formControlName="login" required />
+  <div id="login-length-error" class="error-message" *ngIf="userForm.get('login')?.value.length >= 20"> Логін повинен бути не більше 20 символів</div>
+    
+  <label for="password" class="required">Пароль:</label>
+  <input type="text" id="password" formControlName="password" required />
+  <div id="password-length-error" class="error-message" *ngIf="4 > userForm.get('password')?.value.length">Пароль повинен бути від 4 символів</div>
+    
+  <label for="confirm_password" class="required">Пароль (підтвердження):</label>
+  <input type="text" id="confirm_password" formControlName="confirmPassword" required/>
+  <div id="confirmPassword-length-error" class="error-message" *ngIf="4 > userForm.get('confirmPassword')?.value.length">Повтор паролю повинен бути від 4 символів</div>
+  <div id="match-passwords-error" class="error-message" *ngIf="userForm.get('confirmPassword')?.value !== userForm.get('password')?.value"> Неспівпадіння паролів </div>
+
+  <label for="full_name" class="required">Повне ім'я:</label>
+  <input type="text" id="full_name" formControlName="fullName" required/>
+
+  <label for="email" class="required">E-mail адреса:</label>
+  <input type="text" id="email" formControlName="email" required />
+  <div id="invalid-email-error" class="error-message" *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched"> Неправильний email </div>
+
+  <label for="homepage">Домашня сторінка:</label>
+  <input type="text" id="homepage" formControlName="homepage" />
+
+  <label for="icqNumber">ICQ номер:</label>
+  <input type="number" id="icqNumber" formControlName="icqNumber" />
+
+  <label for="skype_nick">Skype нік:</label>
+  <input type="text" id="skype_nick" formControlName="skypeNickName" />
+
+  <button type="button" (click)="saveForm()">Зареєструватись</button>
+</form>
+
+</body>
+</html>
