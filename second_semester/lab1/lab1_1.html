@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма для додавання викладача</title>
+</head>
+<body>
+    <h2>Форма для додавання викладача</h2>
+    <form action="/add_teacher" method="post">
+        <label for="full_name">Повне ім’я:</label><br>
+        <input type="text" id="full_name" name="full_name"><br><br>
+
+        <label for="gender">Стать:</label><br>
+        <select id="gender" name="gender">
+            <option value="male">Чоловіча</option>
+            <option value="female">Жіноча</option>
+        </select><br><br>
+
+        <label for="dob">Дата народження:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Телефон:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="background_color">Бажаний колір фону:</label><br>
+        <input type="color" id="background_color" name="background_color"><br><br>
+
+        <label for="country">Країна:</label><br>
+        <input type="text" id="country" name="country"><br><br>
+
+        <label for="city">Місто:</label><br>
+        <input type="text" id="city" name="city"><br><br>
+
+        <label for="comment">Коментар:</label><br>
+        <textarea id="comment" name="comment"></textarea><br><br>
+
+        <input type="submit" value="Додати викладача">
+    </form>
+</body>
+</html>
